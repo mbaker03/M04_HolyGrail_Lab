@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+    body {
+        background-color: gray;
+        width: 100%;
+    }
+    
+    header {
+
+        width: 90%;
+
+        height: 100px;
+
+        background-color: #FF95F7;
+
+        border: 3px solid #3EF5C7;
+
+        padding: 10px;
+
+        margin: 25px;
+
+    }
+
+
+
+    nav {
+
+        position: fixed;
+
+        width: 90%;
+
+        height: 60px;
+
+        background-color: #FFF96E;
+
+        position: fixed;
+
+        top: 170px;
+
+        left: 35px;
+
+    }
+
+
+
+    article {
+
+        width: 65%;
+
+        height: 200px;
+
+        background-color: #EBBB90;
+
+        border: 5px solid #FF7966;
+
+        position: relative;
+
+        top: 25px;
+
+    }
+
+
+
+    aside {
+
+        width: 40%;
+
+        height: 420px;
+
+        background-color: #AAF595;
+
+        position: absolute;
+
+        left: 50%;
+
+        right: 10%;
+
+        top: 246px;
+
+    }
+
+
+
+    footer {
+
+        width: 100%;
+
+        height: 60px;
+
+        background-color: #AFAFF8;
+
+        position: fixed;
+
+        bottom: 0px;
+
+    }
+
+
+
+    .articles {
+
+        position: relative;
+
+        left: 30px;
+
+        top: 45px;
+
+        width: 65%;
+
+        height: 70%;
+
+    }
+
+</style>
+<body>
+
+    <header>Due to the header having no position tag, one may assume that it is by default 'static'. This means that the top, left, right, and bottom tags do not affect it. However, because it does not have a set position, both the 'margin' and 'padding' tags need to be adjusted so the header does not overlap any other containers. For example, if the padding were set to 225 instead of 25, this box would be pushed to the middle of the page and behind other boxes. If padding were to be set to 100 instead of 10, this pink area would extend over or under other boxes regardless of their position.</header>
+
+    <nav>This yellow box has its position set to 'fixed'. This means that regardless of where the user scrolls (be it up or down), so long as they remain on the page this box will not move from its position. The left, right, top, and bottom tags are used to position this element. By increasing or decreasing the pixels of either value, a user can push or pull a container on a page.</nav>
+
+    <div>
+
+        <div class="articles">
+
+            <article>Both orange boxes are given the 'relative' tag, meaning that the media/content inside will remain relative to their original position. Essentially they are effected by the top, left, right, and bottom tags, but they will not move unless specified to do so via increasing/decreasing these values. For example, increasing the top from 25 to 255 pushes the boxes further down the page, but the other containers do not move to compensate for it. Instead, a blank area is left behind.</article>
+
+            <article>Unlike the 'fixed' tag applied to the yellow box above, the 'relative' tag will not fill any gaps left by the media or content moved when using the left, top, right, or bottom tags.</article>
+
+        </div>
+
+    <aside>This green box has been given the 'absolute' tag. Elements with the 'absolute' tag will cling closest to their parent container, meaning unlike the 'fixed' tag, this element will not remain relative to the viewport unless there is no parent container-- in which case, it will then follow the user as they scroll. This can prove haphazardous, as the 'absolute' tag gives designated element precendence over the others, thus allowing it to overlap other elements.<br>
+    <br>
+For example, if one were to decrease the 'top' from 246 to 24, this element would be closer to the top of the page-- but overlap both the nav and header elements. On the other hand, if one were to increase the value from 246 to 2466, the box would instead cling to the very bottom of the page as opposed to the top (and leave a giant gap in its wake).</aside>
+
+    </div>
+
+    <footer>The footer element is often given the 'fixed' tag so that it remains at the bottom of a user's screen regardless of where they scroll. This is done by setting the 'bottom' tag to 0, thus bringing the element to the bottom of the page. By increasing its width to 100 by height to 50, the designer guarantees that this element will stretch horizontally to take up the entire viewport but not enough to overtake the other elements on the main body.</footer>
+</body>
+</html>
